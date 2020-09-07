@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="div1 div2 div3">123</div>
+</body>
+<!--<frameset rows="160, *">-->
+<!--    <frame src="http://localhost:9015/intelligent/create#ids" name="topFrame">-->
+<!--    <frameset cols="50%, 50%">-->
+<!--        <frame name="leftFrames">-->
+<!--        <frame name="rightFrames">-->
+<!--    </frameset>-->
+<!--</frameset>-->
+<!--<body>-->
+<!--    <div id="app">-->
+<!--        <div v-html="message"></div>-->
+<!--        <div class="btns">-->
+<!--            <template v-if="val">-->
+<!--                <a href="javascript:;" style="background: red;" @mouseover="val = !val">{{btn1}}</a>-->
+<!--                <a href="javascript:;" @click="handle">{{btn2}}</a>-->
+<!--            </template>-->
+<!--            <template v-else>-->
+<!--                <a href="javascript:;" @click="alert('123')">{{btn2}}</a>-->
+<!--                <a href="javascript:;" style="background: red;" @mouseover="val = !val">{{btn1}}</a>-->
+<!--            </template>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</body>-->
+<!--<style>-->
+<!--    .btns a {-->
+<!--        display: inline-block;-->
+<!--        margin: 20px;-->
+<!--        padding: 20px;-->
+<!--        text-decoration: none;-->
+<!--        width:160px;-->
+<!--        height:32px;-->
+<!--        background:rgba(243,240,255,1);-->
+<!--        border-radius:4px;-->
+<!--        border:1px solid rgba(69,66,255,1);]-->
+<!--    }-->
+<!--</style>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>-->
+<script type="text/javascript">
+    // new Vue ({
+    //     el: '#app',
+    //     data: {
+    //         message: `<h1>每日一问 不过今天问的早了点</h1><p>打车怪今天打车吗</p >`,
+    //         val: 1,
+    //         btn1: '不打车，陪你走回家',
+    //         btn2: '我打车，你自己走回家'
+    //     },
+    //     methods: {
+    //         handle() {
+    //             alert('诶，你气不气～')
+    //         }
+    //     }
+    // })
+    // "use strict";
+    // var b = function fun(num) {
+    //     console.log(arguments, 'arguments')
+    //     if (num <= 1) {
+    //         return 1;
+    //     } else {
+    //         return num * arguments.callee(num - 1);
+    //     }
+    // }
+    // function fun(num) {
+    //     return 0
+    // }
+    //
+    // console.log('b', b(3));
+    // var res = fun(3);
+    // console.log(res)
+    // function outer(num1, num2, num3) {
+    //     console.log(Object.keys(arguments))
+    //     // inner();
+    // }
+    // function inner() {
+    //     console.log(arguments.callee.caller)
+    // }
+    // outer(6,7,8)
+
+    // function a() {
+    //     console.log('a', this)
+    // }
+    //
+    // a();
+    //
+    // (function() {
+    //     var name = 30;
+    //     var val = 4;
+    //     // debugger
+    //     console.log(this, typeof name)
+    // }.bind(this))()
+    // that = this;
+    // function sum(num) {
+    //     console.log(this)
+    //     return this.a.name + this.a.val
+    // }
+    //
+    // let name = 3;
+    // var val = 4;
+    //
+    // var a = {
+    //     name: 3,
+    //     val: 4
+    // }
+    // console.log(window, typeof name)
+
+    // console.log(sum())
+    //
+    // console.log(sum.apply(this, [a.name]))
+
+    // var value = '25';
+    // var number = new Number(value);
+    // console.log(number instanceof Number, number instanceof Object)
+    // // console.log(value.__proto__ === number.__proto__)
+    // // console.log(number.__proto__)
+    // console.log(Object.prototype.toString(value), number, number.__proto__, Number.prototype)
+    // let val = Boolean(false) && true;
+
+    // Function.prototype.before = function (beforeFn) {
+    //     const _self = this;
+    //     return function () {
+    //         console.log(_self, beforeFn)
+    //         beforeFn.apply(this, arguments);
+    //         return _self.apply(this, arguments);
+    //     }
+    // }
+    //
+    // Function.prototype.after = function (afterFn) {
+    //     const _self = this;
+    //     return function () {
+    //         console.log('self', _self)
+    //         const ret = _self.apply(this, arguments);
+    //         console.log('ret', ret)
+    //         afterFn.apply(this, arguments);
+    //         return ret;
+    //     }
+    // }
+    //
+    // let func = function () {
+    //     console.log('2');
+    // }
+    //
+    // func = func.after(function() {
+    //     console.log('3');
+    // })
+    //
+    // func()
+
+    // console.log('   abv  '.trimStart().length)
+
+
+    // function f() {
+    //     console.log(123);
+    //     this.apply(this)
+    // }
+    // f()
+    // var Person = function(name, val) {
+    //     console.log(this)
+    //     this.name = name;
+    //     this.val = val;
+    //     this.fun = fun
+    //     this.content = Person
+    // }
+    // Person.prototype.params = 'gaogao'
+    // function fun() {
+    //     console.log(this.name, this.val)
+    // }
+    // var person1 = new Person('高林雄', '很帅')
+    // var person2 = new Person('高林雄1', '非常帅')
+    // console.log(person2, person2.__proto__, Object.getPrototypeOf(person2), Person.prototype.isPrototypeOf(person1))
+
+    // Object.defineProperty(person, 'gao', function() {
+    //     console.log('this', this)
+    //     return {
+    //         value: '123'
+    //     }
+    // })
+    // Person.prototype.age = 2
+    // var person = new Person()
+    // Object.defineProperty(person, 'gao', {
+    //     value: '123'
+    // })
+    // console.log(person)
+    // console.log(Object.getOwnPropertyNames(person))
+    // console.log(Object.entries(person))
+    // console.log(Object.keys(person))
+    // for (let personKey in person) {
+    //     console.log('personKey', personKey)
+    // }
+
+    // console.log(Object.getOwnPropertyDescriptor(person, 'gao'))
+    //
+    // delete person.name
+    //
+    // person.__defineGetter__('gao', function() {
+    //     return this.val
+    // })
+    //
+    //
+    //
+    // console.log(person.gao)
+
+    // var a = {};
+    // a.info = a;
+    // console.log(Object.assign(a, {
+    //     b: 34
+    // }), a)
+    // var obj1 = { fun: function(){ console.log(123) } };
+    // var obj2 = JSON.parse(JSON.stringify(obj1));
+    // console.log(obj1);
+    // // 'function'
+    // console.log(obj2);
+
+    // function deepClone(initalObj, finalObj) {
+    //     var obj = finalObj || {};
+    //     for (var i in initalObj) {
+    //         var prop = initalObj[i];      // 避免相互引用对象导致死循环，如initalObj.a = initalObj的情况
+    //         if(prop === obj) {
+    //             continue;
+    //         }
+    //         if (typeof prop === 'object') {
+    //             obj[i] = (prop.constructor === Array) ? [] : {};
+    //             arguments.callee(prop, obj[i]);
+    //         } else {
+    //             obj[i] = prop;
+    //         }
+    //     }
+    //     return obj;
+    // }
+
+
+    // function deepCopy(target){
+    //     console.log('target1', target)
+    //     let copyed_objs = [];//此数组解决了循环引用和相同引用的问题，它存放已经递归到的目标对象
+    //     function _deepCopy(target){
+    //         if((typeof target !== 'object')||!target){return target;}
+    //         console.log('target2', target)
+    //         for(let i= 0 ;i < copyed_objs.length;i++){
+    //             console.log('target3', copyed_objs)
+    //             if(copyed_objs[i].target === target){
+    //                 return copyed_objs[i].copyTarget;
+    //             }
+    //         }
+    //         let obj = {};
+    //         if(Array.isArray(target)){
+    //             console.log('target4', target)
+    //             obj = [];//处理target是数组的情况
+    //         }
+    //         copyed_objs.push({target:target,copyTarget:obj})
+    //         console.log('target5', copyed_objs)
+    //         Object.keys(target).forEach(key=>{
+    //             console.log('target6', key)
+    //             if(obj[key]){ return;}
+    //             console.log('target8', obj[key], target[key], copyed_objs)
+    //             obj[key] = _deepCopy(target[key]);
+    //         });
+    //         console.log('target7', obj)
+    //         return obj;
+    //     }
+    //     return _deepCopy(target);
+    // }
+    // console.log(deepCopy(a));
+
+    // function deepClone(obj) {
+    //     if (!obj || typeof obj !== 'object') return
+    //     let newObj = Array.isArray(obj) ? [] : {}
+    //     for (let key in obj) {
+    //         if (obj.hasOwnProperty(key)) {
+    //             newObj[key] =
+    //                 typeof obj[key] === 'object' ? deepClone(obj[key]) : obj[key]
+    //         }
+    //     }
+    //     return newObj
+    // }
+    // deepClone(a)
+
+    // let b = [
+    //     'EM M MH',
+    //     'E M H',
+    //     'E M MH',
+    //     'EM MH H',
+    //     'E EM MH',
+    //     'E EM H'
+    // ];
+    //
+    // console.log()
+    // for(let i = 0; i < 6; i++) {
+    //     let res = [];
+    //     let a = {
+    //         E: 1,
+    //         EM: 1,
+    //         M: 2,
+    //         MH: 1,
+    //         H: 1
+    //     };
+    //     b.unshift(b.pop())
+    //     b.forEach(item => {
+    //         let arr = item.split(' ')
+    //         if (a[arr[0]] > 0 && a[arr[1]] > 0 && a[arr[2]] > 0) {
+    //             res.push(item);
+    //             a[arr[0]]--;
+    //             a[arr[1]]--;
+    //             a[arr[2]]--;
+    //         }
+    //     })
+    //     console.log(res)
+    // }
+
+    // let a = {
+    //     gao: '1',
+    //     lin: '2'
+    // }
+    // Object.defineProperty(a, 'xiong', {
+    //     value: 2,
+    //
+    // })
+    // for(var i=0;i<5;){
+    //     i++;
+    //     console.log(i)
+    // }
+
+    // function Person() {
+    //
+    // }
+    // console.log(Person.prototype)
+    // Person.prototype = {
+    //     name: '高林雄',
+    //     val: '很帅'
+    // }
+    // Object.defineProperty(Person.prototype, 'constructor', {
+    //     value: Person,
+    //     enumerable: false
+    // })
+    // var frank = new Person();
+    // console.log(Person.prototype, frank)
+    // for(let i in frank) {
+    //     console.log('frank', i)
+    // }
+
+    // function compareFun() {
+    //     var result = new Array();
+    //     for (var i = 0; i < 10; i++) {
+    //         result[i] = function() {
+    //             return i;
+    //         }
+    //     }
+    //     return result;
+    // }
+    // compareFun()
+
+    // for(var i=0;i<5;i++){
+    //     setTimeout(() => {
+    //         console.log(i)
+    //     },i*1000)
+    // }
+
+    // function f() {
+    //     var a = 10
+    //     console.log('this', this)
+    //     console.log(window, this)
+    // }
+    // f()
+    // console.log(a)
+
+// (function f() {
+//     var privateValue = 10;
+//
+//     function privateFun() {
+//         return false;
+//     }
+//
+//     MyObject = function() {
+//
+//     };
+//
+//     MyObject.prototype.publicMethod = function() {
+//         privateValue++;
+//         return privateFun()
+//     }
+// })()
+// console.log(new MyObject().publicMethod())
+
+    // console.log(document.querySelectorAll("body div")[0].classList.toggle('div4'))
+    // console.log(document.querySelectorAll("body div")[0])
+    // let divElement = document.querySelectorAll("body div")[0];
+    // divElement.outerHTML = '<p>this id</p>'
+    // function outerFun()
+    // {
+    //     //没有var
+    //     var a =0;
+    //     alert(a);
+    // }
+    // var a=4;
+    // outerFun();
+    // alert(a);
+    // var obj = {}
+    // for (var i = 0; i < 10000; i++) {
+    //     obj[i] = new Array(10000000)
+    //     console.log('-----')
+    // }
+
+    // function fn() {
+    //     a = new Array(10000000)
+    //     console.log(a)
+    // }
+    // fn()
+    var b = 10
+    function a(){
+        var b = 1
+        return function c(){//暴露内部函数的接口
+            console.log(b)
+        }
+    }
+    console.log('b', b)
+    a()()
+    console.log('==b', b)
+
+</script>
+</html>
